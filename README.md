@@ -5,3 +5,12 @@
 
 Learn and Practice Rust by solving daily challenges for a month on Advent of Rust 2024.
 
+## mini docs
+
+If you want execute the code, you can use the following command:
+
+```bash
+cargo run --bin day*
+```
+
+where `*` is the day number you want to execute.
