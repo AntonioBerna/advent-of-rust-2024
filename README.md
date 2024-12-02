@@ -5,5 +5,3 @@
 
 Learn and Practice Rust by solving daily challenges for a month on Advent of Rust 2024.
 
-> [!TIP]
-> For more information click [here](https://www.rustfinity.com/advent-of-rust).
