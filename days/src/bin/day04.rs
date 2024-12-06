@@ -18,18 +18,6 @@ pub struct Kid {
 }
 
 impl Kid {
-    pub fn is_nice(good_deeds: u32, bad_deeds: u32) -> bool {
-        if good_deeds == 0 && bad_deeds == 0 {
-            return false;
-        }
-    
-        let good_deeds = good_deeds as f32 * GOOD_WEIGHT;
-        let bad_deeds = bad_deeds as f32 * BAD_WEIGHT;
-        let ratio = good_deeds / (good_deeds + bad_deeds);
-    
-        ratio >= 0.75
-    }
-
     pub fn new(name: String, good_deeds: u32, bad_deeds: u32) -> Kid {
         // Return a Kid instance
         let niceness = if Kid::is_nice(good_deeds, bad_deeds) {
@@ -39,5 +27,18 @@ impl Kid {
         };
 
         Kid { name, niceness }
+    }
+
+    pub fn is_nice(good_deeds: u32, bad_deeds: u32) -> bool {
+        if good_deeds == 0 && bad_deeds == 0 {
+            return false;
+        }
+    
+        let good_deeds = good_deeds as f32 * GOOD_WEIGHT;
+        let bad_deeds = bad_deeds as f32 * BAD_WEIGHT;
+        
+        let ratio = good_deeds / (good_deeds + bad_deeds);
+    
+        ratio >= 0.75
     }
 }
