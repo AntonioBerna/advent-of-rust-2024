@@ -6,7 +6,9 @@ paginate: true
 transition: cube
 ---
 
-# Day 07 - The Great Log Hunt
+# Day 07
+
+###### The Great Log Hunt
 
 ---
 

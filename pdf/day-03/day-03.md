@@ -6,7 +6,9 @@ paginate: true
 transition: cube
 ---
 
-# Day 03 - Restoring the Nice List
+# Day 03
+
+###### Restoring the Nice List
 
 ---
 

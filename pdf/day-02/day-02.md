@@ -6,7 +6,9 @@ paginate: true
 transition: cube
 ---
 
-# Day 02 - Memory doesn't grow on Christmas trees 🎄
+# Day 02
+
+###### Memory doesn't grow on Christmas trees 🎄
 
 ---
 

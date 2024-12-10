@@ -6,7 +6,9 @@ paginate: true
 transition: cube
 ---
 
-# Day 05 - Parsing naughty-list.csv
+# Day 05
+
+###### Parsing naughty-list.csv
 
 ---
 

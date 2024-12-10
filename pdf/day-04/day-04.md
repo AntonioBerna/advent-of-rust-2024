@@ -6,7 +6,9 @@ paginate: true
 transition: cube
 ---
 
-# Day 04 - Structifying the Naughty List
+# Day 04
+
+###### Structifying the Naughty List
 
 ---
 

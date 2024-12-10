@@ -6,7 +6,9 @@ paginate: true
 transition: cube
 ---
 
-# Day 06 - Blitzen and Snowball's Unproductive Debate
+# Day 06
+
+###### Blitzen and Snowball's Unproductive Debate
 
 ---
 
