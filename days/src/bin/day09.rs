@@ -25,13 +25,15 @@ impl Snowball {
 impl From<SnowKg> for Snowball {
     // 1. Implement the conversion from SnowKg to Snowball
     fn from(kg: SnowKg) -> Self {
-        Snowball((kg.0 / SNOWBALL_WEIGHT_KG).round() as i64)
+        let snowballs = (kg.0 / SNOWBALL_WEIGHT_KG).round() as i64;
+        Snowball(snowballs)
     }
 }
 
 // 2. Implement the same for SnowLb
 impl From<SnowLb> for Snowball {
     fn from(lb: SnowLb) -> Self {
-        Snowball((lb.0 / SNOWBALL_WEIGHT_LB).round() as i64)
+        let snowballs = (lb.0 / SNOWBALL_WEIGHT_LB).round() as i64;
+        Snowball(snowballs)
     }
 }
