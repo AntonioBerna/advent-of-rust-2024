@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 05
@@ -30,7 +34,7 @@ Charlie,1,9
 
 "We need to create another function," Prancer continued. "to parse the CSV rows into `Kid` structs."
 
-Blitzen slammed his mug down. "And since Santa put me in charge of this project, I'm naming the function. It's going to be called `parse_row`."
+Blitzen slammed his mug down. "And since Santa put me in charge of this project, I'm naming the function. It's going to be called `parse_row`".
 
 ---
 
@@ -49,6 +53,10 @@ Silence.
 ## The Frustation
 
 Blitzen paced. "We need a function that takes a CSV row, splits it, and converts it into a `Kid`. Name is easy—it stays a `String`. The good and bad deeds, though, need to be parsed to `u32`."
+
+---
+
+## The Frustation
 
 "But what if the row has garbage data?" asked an elf, holding up a note with `Charlie,,9` scribbled on it.
 
@@ -78,19 +86,20 @@ The function should:
 If you're stuck, here are some hints to help guide you:
 
 - **Split the Row:** Use `split(',')` to divide the CSV row into parts. `let fields = row.split(',');`
-
 - **Get Next Field:** Get the next field with `next()`, it's going to return an `Option<&str>`.
-
-- **Must be mutable:** The `next()` method requires a mutable reference to the iterator. So make it mutable, `let mut fields = row.split(',');`.
 
 ---
 
 ## Hints
 
+- **Must be mutable:** The `next()` method requires a mutable reference to the iterator. So make it mutable, `let mut fields = row.split(',');`.
 - **Transform Option to Result:** Use `ok_or(&str)` to convert the `Option` to a `Result`. e.g., `fields.next().ok_or("Missing field")`.
 
-- **Propagate Errors (optional):** Use `?` to propagate errors. e.g., `fields.next().ok_or("Missing field")?`.
+---
 
+## Hints
+
+- **Propagate Errors (optional):** Use `?` to propagate errors. e.g., `fields.next().ok_or("Missing field")?`.
 - **Create a String:** After you get access to the `&str` use the `to_string()` method to make it a `String` and have [Ownership](https://www.rustfinity.com/learn/rust/ownership).
 
 ---

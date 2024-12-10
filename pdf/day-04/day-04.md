@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 04
@@ -15,6 +19,10 @@ transition: cube
 ## The Story
 
 Santa burst into the dev lounge, chugging his third espresso. "Great job yesterday, nerds! The `is_nice` function? Chef's kiss. But now, I want structure. STRUCTURE! We're going full-on Rustacean. I need a `Kid` struct—immediately!"
+
+---
+
+## The Story
 
 The elves nodded enthusiastically, their tiny laptops open, running Arch Linux with bspwm because, obviously, they were that kind of devs. One elf, started yapping, "But Santa, why a struct? Isn't this just overengineered?"
 
@@ -41,6 +49,11 @@ The elves need your help to finish the `Kid` struct.
 Here is what you need to do:
 
 - Add two variants to the `Niceness` enum: `Nice` and `Naughty`. `Nice` takes the number of good deeds.
+
+---
+
+## Your Task
+
 - Add two fields to the `Kid` struct: `name` of type `String` and `niceness` of type `Niceness`.
 - Move the `is_nice` function we created on [Day 3](https://www.rustfinity.com/practice/rust/challenges/aor-2024-3/description) to an [associated function](https://www.rustfinity.com/learn/rust/structs/implementing-methods#associated-functions) of the `Kid` struct.
 - Finally, implement the `new()` associated function for the `Kid` struct.

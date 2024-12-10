@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 07
@@ -37,6 +41,10 @@ Prancer recoiled, whispering, "Too far, Blitzen. Too far."
 ## A LogQuery Tool
 
 Blitzen wanted a log search tool so advanced that even Santa would call it "blitzening fast". Logs were piling up from every North Pole subsystem—Toy Tracker 3000, SleighOS, and even Reindeer AI. The elves needed to find specific entries without scrolling for hours.
+
+---
+
+## A LogQuery Tool
 
 "You!" Blitzen pointed at Frostbyte, the elf known for typing faster than a Model M keyboard. "You're going to write a `LogQuery` struct in Rust that can search through our logs."
 

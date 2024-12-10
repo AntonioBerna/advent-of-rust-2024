@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 02
@@ -22,6 +26,10 @@ We'd like to clarify our intention behind [Day 1 of Advent of Rust](https://www.
 
 The decision to use cloning was intentional, meant for educational purposes and to align with the story's style. We apologize for any misunderstanding this may have caused. In today's challenge, we'll revisit and demonstrate a better approach, showcasing more optimal Rust practices.
 
+---
+
+## Before we start
+
 Thank you for your patience and understanding as the story continues to unfold!
 
 Enjoy!
@@ -32,6 +40,10 @@ Enjoy!
 
 Santa stormed into the workshop like a grizzly bear that just got paged for an on-call issue at 3 AM. Santa's face twisted into a mix of frustration and disbelief—a dire sign that even his usually jolly demeanor couldn't mask the disappointment.
 
+---
+
+## The Story
+
 "Who wrote this monstrosity?!" Santa boomed, holding a printed stack of code like it was his naughty list. "Do you think memory grows on Christmas trees? CLONE?! Another allocation for the same string?!"
 
 ---
@@ -41,6 +53,10 @@ Santa stormed into the workshop like a grizzly bear that just got paged for an o
 The room fell silent. The elves exchanged nervous glances; it seemed like the code you wrote yesterday wasn't up to Santa's standards.
 
 "But Santa," one of the elves began, "we thought cloning was safe! No borrow-checker drama—"
+
+---
+
+## The Story
 
 "Safe? Sure. Efficient? NO!" Santa interrupted. "We need to use [references](https://www.rustfinity.com/learn/rust/ownership/borrowing)! Borrow the data, don’t hog it! Everything has its own place, and using `.clone()` here is not! This is Rust! Memory efficiency is the whole point!"
 

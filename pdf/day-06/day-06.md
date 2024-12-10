@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 06
@@ -24,13 +28,17 @@ Blitzen leaned back in his reindeer chair knowing he's the boss now, sipping his
 
 Snowball was a junior developer, he didn't know anything about Rust especially references, it seemed to confuse him, he looked up from their keyboard, skeptical. "That's absurd. [Functions](https://www.rustfinity.com/learn/rust/the-programming-basics/functions) return values, not references. You can't return a borrowed value, Blitzen. It'll dangle."
 
-"Oh, you poor, naive elf," Blitzen said with a smug grin. "Behold the power of lifetimes!" He started scribbling on the whiteboard.
-
 ---
 
 ## The Story
 
+"Oh, you poor, naive elf," Blitzen said with a smug grin. "Behold the power of lifetimes!" He started scribbling on the whiteboard.
+
 "Okay, but why do we even need this?" Snowball asked, raising an eyebrow. "What's the use case?"
+
+---
+
+## The Story
 
 "We need to avoid unnecessary re-allocations, Snowball. It's more efficient this way. Remember day 2 when Santa was mad at us for a simple clone on a damn `String`? It wasn't even that big of a deal!"
 

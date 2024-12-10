@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 08
@@ -34,6 +38,10 @@ ERROR: SleighOS failed to authenticate.
 ERROR: Reindeer AI unable to locate Prancer.
 ```
 
+---
+
+## The Discovery of Errors
+
 He squinted at the terminal, his antlers practically buzzing with excitement. "This... this is big," Blitzen declared dramatically. "These errors need to be isolated, analyzed, and stored in their own file. This could save Christmas!"
 
 ---
@@ -61,6 +69,11 @@ Blitzen grinned. "Because I'm the Tech Lead."
 You must come to the elves rescue! Implement the `export_to_file(&self, keyword: &str, file_path: &str)` method in `LogQuery` that:
 
 1. Use the `search` method we created earlier to get logs matching the `keyword`.
+
+---
+
+## Your Mission
+
 2. Loop over the returned logs and write them to a file, the location is given by the parameter `path`.
 3. **Handles Errors:** If the file can't be created or written to, the function should return an appropriate error instead of crashing.
 
@@ -72,13 +85,18 @@ If you're stuck or need a starting point, here are some hints to help you along 
 
 - Make sure you import the necessary modules. e.g., `use std::{fs::File, io::Write};`.
 - Get the logs using the `search` method we created in the previous challenge. e.g.` let logs = self.search(keyword);`.
-- Create a mutable file using `File::create`. e.g. `let mut file = File::create(path)?;`
 
 ---
 
 ## Hints
 
+- Create a mutable file using `File::create`. e.g. `let mut file = File::create(path)?;`
 - Properly handle errors with `Result` and `?` to propagate them.
+
+---
+
+## Hints
+
 - Loop over the logs and use the `writeln!` macro to write to the file. e.g.
 
     ```rust

@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 09
@@ -14,13 +18,23 @@ transition: cube
 
 ## The Story
 
-The elves trudged into the North Pole office, their little faces as frosty as leftover cocoa. The holiday crunch was bad enough, but Blitzen's latest antics had turned it into a nightmare. As the self-appointed "Tech Lead," Blitzen wouldn't stop yapping about optimizing Rust code that didn't need optimizing. Meanwhile, the real issues in Santa's GitHub repo—the gift filtering bug and the broken nice-kid calculator—were piling up like unwrapped presents on December 24th.
+The elves trudged into the North Pole office, their little faces as frosty as leftover cocoa. The holiday crunch was bad enough, but Blitzen's latest antics had turned it into a nightmare. As the self-appointed "Tech Lead," Blitzen wouldn't stop yapping about optimizing Rust code that didn't need optimizing.
+
+---
+
+## The Story
+
+Meanwhile, the real issues in Santa's GitHub repo—the gift filtering bug and the broken nice-kid calculator—were piling up like unwrapped presents on December 24th.
 
 ---
 
 ## The Story
 
 The elves slumped into their desks, morale at absolute zero. That's when Santa stomped into the room, red-faced and gripping his enormous candy cane staff. His expression said it all: Unhinged Santa Mode Activated.
+
+---
+
+## The Story
 
 "WHAT IN THE NAME OF PRANCER'S LEFT HOOF IS GOING ON HERE?!" Santa bellowed. "Blitzen, what"s this I hear about you trying to write your own grep?!"
 
@@ -41,6 +55,10 @@ Santa turned to the rest of the elves. "Everyone, listen up. Blitzen... you’re
 The room gasped. Even the code compiler on the corner workstation seemed to pause in shock. Blitzen’s antlers drooped.
 
 "Well, not fired," Santa clarified, stroking his beard. "But you're off tech lead. Effective immediately, you’re on..." he smirked, "Candy Cane API maintenance. Enjoy your new repo."
+
+---
+
+## The Story
 
 The elves stifled giggles as Blitzen sulked away. Santa clapped his hands, bringing their attention back to the matter at hand.
 
@@ -66,16 +84,25 @@ The room buzzed with renewed energy. The elves, though still peeved at Blitzen, 
 
 Santa grinned as he marched out. "And if anyone so much as mentions rewriting ls in Rust, you're on tinsel-wrapping duty."
 
+---
+
 ## Your Mission
 
 - Implement the `From<T>` trait for the `SnowKg` and `SnowLb` types to convert them into `Snowball` type.
 - The `Snowball` type should contain the number of snowballs that can be made from the given weight.
+
+---
+
+## Your Mission
+
 - The results should be rounded down or up to the nearest whole number.
 - Make sure you use the `SNOWBALL_WEIGHT_KG` and `SNOWBALL_WEIGHT_LB` [constants](https://www.rustfinity.com/learn/rust/the-programming-basics/variables#constants) to calculate the number of snowballs.
 
+---
+
 ## Hints
 
-If you’re stuck or need a starting point, here are some hints to help you along the way!
+If you're stuck or need a starting point, here are some hints to help you along the way!
 
 - Use the `SNOWBALL_WEIGHT_KG` and `SNOWBALL_WEIGHT_LB` constants to find the number of snowballs from a weight.
 - Implement the `From<T>` trait for each type. e.g. `impl From<WeightInKg> for Snowball`.
@@ -92,6 +119,10 @@ If you’re stuck or need a starting point, here are some hints to help you alon
         SnowBall(value)
     }
     ```
+
+---
+
+## Hints
 
 - Use `round()` to round the result to the nearest whole number. e.g. `value.round()`.
 - Convert the result to an integer using `as i64`.

@@ -4,6 +4,10 @@ theme: uncover
 class: invert
 paginate: true
 transition: cube
+style: |
+    * {
+        font-family: "JetBrains Mono";
+    }
 ---
 
 # Day 03
@@ -15,6 +19,10 @@ transition: cube
 ## The Story
 
 The elves were in high spirits. For the first time in centuries, yesterday's code review had eradicated every unnecessary heap allocation in Santa's list-checking algorithm. "Finally," yapped an elf sipping a Red Bull mocktail, "no more unnecessary allocations, no more clones".
+
+---
+
+## The Story
 
 The workshop buzzed with excitement as the DevOps elves live-streamed the successful merge on ElfHub. Even Blitzen was chill for once, reclining by the server rack, listening to lofi beats.
 
@@ -106,6 +114,11 @@ Santa’s counting on you. Save Christmas and keep the Nice list free of data br
 
 If you're stuck, here are some hints to help you get back on track:
 
-- Use the `as` keywords to convert the `u32` (unsigned 32-bit integer) to a `f64` (floating-point number) before doing any numerical operations. e.g. `good_deeds as f64`
+- Use the `as` keywords to convert the `u32` (unsigned 32-bit integer) to a `f64` (floating-point number) before doing any numerical operations. e.g. `good_deeds as f64`.
+
+---
+
+## Hints
+
 - Remember to use parentheses to ensure the correct order of operations.
 - Remember to return a `bool` value from the function.
