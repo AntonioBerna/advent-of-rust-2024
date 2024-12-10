@@ -75,38 +75,38 @@ The function should:
 
 If you're stuck, here are some hints to help guide you:
 
-- **Split the Row**: Use `split(',')` to divide the CSV row into parts. `let fields = row.split(',');`
+- **Split the Row:** Use `split(',')` to divide the CSV row into parts. `let fields = row.split(',');`
 
-- **Get Next Field**: Get the next field with `next()`, it's going to return an `Option<&str>`.
+- **Get Next Field:** Get the next field with `next()`, it's going to return an `Option<&str>`.
 
-- **Must be mutable**: The `next()` method requires a mutable reference to the iterator. So make it mutable, `let mut fields = row.split(',');`.
-
----
-
-## Hints
-
-- **Transform Option to Result**: Use `ok_or(&str)` to convert the `Option` to a `Result`. e.g., `fields.next().ok_or("Missing field")`.
-
-- **Propagate Errors (optional)**: Use `?` to propagate errors. e.g., `fields.next().ok_or("Missing field")?`.
-
-- **Create a String**: After you get access to the `&str` use the `to_string()` method to make it a `String` and have [Ownership](https://www.rustfinity.com/learn/rust/ownership).
+- **Must be mutable:** The `next()` method requires a mutable reference to the iterator. So make it mutable, `let mut fields = row.split(',');`.
 
 ---
 
 ## Hints
 
-- **Parse Numbers**: Parse the second and third fields as `u32` for good and bad deeds. Use `.parse()`, you can either turbofish `parse::<u32>()` or assign a type to the variable `let good_deeds: u32 = fields.next().ok_or("Missing field")?.parse();`.
+- **Transform Option to Result:** Use `ok_or(&str)` to convert the `Option` to a `Result`. e.g., `fields.next().ok_or("Missing field")`.
+
+- **Propagate Errors (optional):** Use `?` to propagate errors. e.g., `fields.next().ok_or("Missing field")?`.
+
+- **Create a String:** After you get access to the `&str` use the `to_string()` method to make it a `String` and have [Ownership](https://www.rustfinity.com/learn/rust/ownership).
 
 ---
 
 ## Hints
 
-- **Map the Error**: The error from the `parse()` method can't be propagated directly, you need to map it to the return types error type `&'static str` using `map_err()`. e.g., `fields.next().ok_or("Missing field")?.parse().map_err(|_| "Invalid good deeds")?`.
+- **Parse Numbers:** Parse the second and third fields as `u32` for good and bad deeds. Use `.parse()`, you can either turbofish `parse::<u32>()` or assign a type to the variable `let good_deeds: u32 = fields.next().ok_or("Missing field")?.parse();`.
 
 ---
 
 ## Hints
 
-- **Create the `Kid`**: Pass the extracted values to `Kid::new` to build the `Kid` struct.
+- **Map the Error:** The error from the `parse()` method can't be propagated directly, you need to map it to the return types error type `&'static str` using `map_err()`. e.g., `fields.next().ok_or("Missing field")?.parse().map_err(|_| "Invalid good deeds")?`.
 
-- **Return a `Result`**: Use `Ok` for success and meaningful error messages (like `"Invalid good deeds"`) for failures.
+---
+
+## Hints
+
+- **Create the `Kid`:** Pass the extracted values to `Kid::new` to build the `Kid` struct.
+
+- **Return a `Result`:** Use `Ok` for success and meaningful error messages (like `"Invalid good deeds"`) for failures.
