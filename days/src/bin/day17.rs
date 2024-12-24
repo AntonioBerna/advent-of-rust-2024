@@ -2,6 +2,8 @@
 
 const CHRISTMAS_EMOJIS: [char; 4] = ['🎅', '🤶', '🎄', '🎁'];
 
+// Begin Solution
+
 // Define the trait Anonymize
 pub trait Anonymize {
     fn anonymize_email(&self) -> String;
@@ -32,6 +34,8 @@ impl Anonymize for String {
         }
     }
 }
+
+// End Solution
 
 pub fn main() {
     let emails = vec![

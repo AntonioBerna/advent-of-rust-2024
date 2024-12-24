@@ -6,6 +6,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 pub struct TempFile {
     file_path: PathBuf,
     file: File,
+    // 1. Add a new field named `content` with a valid type
     content: Vec<u8>,
 }
 
@@ -34,12 +35,14 @@ impl TempFile {
         })
     }
 
+    // 2. Change this method to update the `content` field on every write
     pub fn write(&mut self, data: &[u8]) -> Result<(), std::io::Error> {
         self.file.write_all(data)?;
         self.content = data.to_vec();
         Ok(())
     }
 
+    // 3. Update this method to return the content as a string slice
     pub fn read_from_cache(&self) -> &str {
         std::str::from_utf8(&self.content).unwrap_or("")
     }

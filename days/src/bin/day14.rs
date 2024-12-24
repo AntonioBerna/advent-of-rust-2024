@@ -12,6 +12,7 @@ pub struct ReindeerGift {
     pub name: String,
 }
 
+// Begin Solution
 impl fmt::Display for KidsGift {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "Kids Gift: {}", self.name)
@@ -33,6 +34,7 @@ impl fmt::Display for ReindeerGift {
 pub fn display_gift<T: fmt::Display>(gift: &T) {
     println!("{}", gift);
 }
+// End Solution
 
 fn main() {
     let kids_gift = KidsGift {

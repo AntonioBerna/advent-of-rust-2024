@@ -4,6 +4,7 @@ pub struct Empty;
 pub struct Ready;
 pub struct Flying;
 
+// Define the `status` method for all states
 pub trait State {
     fn status() -> &'static str;
 }
@@ -27,6 +28,8 @@ impl State for Flying {
 }
 
 pub struct Sleigh<T: State> {
+    // This is only public for testing purposes
+    // In real-world scenarios, this should be private
     pub state: PhantomData<T>,
 }
 

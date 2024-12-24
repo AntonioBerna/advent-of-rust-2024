@@ -7,6 +7,7 @@ pub struct Sleigh {
 
 #[derive(Clone)]
 pub struct SleighBuilder {
+    // Define the fields of SleighBuilder here
     color: String,
     engine: String,
     gift_capacity: u32,
@@ -14,6 +15,7 @@ pub struct SleighBuilder {
 }
 
 impl SleighBuilder {
+    // Begin Solution
     pub fn new() -> Self {
         SleighBuilder {
             color: "red".to_string(),
@@ -51,6 +53,7 @@ impl SleighBuilder {
             magical_enhancements: self.magical_enhancements,
         }
     }
+    // End Solution
 }
 
 // Don't Change this implementation

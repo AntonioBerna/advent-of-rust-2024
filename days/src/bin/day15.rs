@@ -47,7 +47,6 @@ impl Gift for ReindeerGift {
     }
 }
 
-// Implement Display for the gift structs
 impl fmt::Display for KidsGift {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "{}", self.name)

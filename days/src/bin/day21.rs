@@ -1,3 +1,4 @@
+// Begin Solution
 use std::env::temp_dir;
 use std::fs::File;
 use std::path::PathBuf;
@@ -15,8 +16,10 @@ impl Drop for TempFile {
         let _ = std::fs::remove_file(self.path());
     }
 }
+// End Solution
 
 impl TempFile {
+    // Begin Solution
     pub fn new() -> Result<Self, std::io::Error> {
         for n in 0.. {
             let file_path = temp_dir().join(format!("/tmp/.tmp{}", n));
@@ -42,6 +45,7 @@ impl TempFile {
       file.read_to_string(&mut buffer)?;
       Ok(buffer)
     }
+    // End Solution
     
     pub fn path(&self) -> &PathBuf {
         &self.file_path

@@ -29,6 +29,7 @@ impl Kid {
         Kid { name, niceness }
     }
 
+    // Move yesterday's function to an associated function in the struct
     pub fn is_nice(good_deeds: u32, bad_deeds: u32) -> bool {
         if good_deeds == 0 && bad_deeds == 0 {
             return false;
