@@ -1,3 +1,7 @@
+<p align="center">
+    <img src=".github/advent-of-rust-2024.webp">
+</p>
+
 # Advent of Rust 🦀 2024
 
 ![GitHub License](https://img.shields.io/github/license/antonioberna/advent-of-rust-2024)
